@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+    <!-->logeo<-->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.sierra.vhr.fragments.LoginFragment"
+        android:label="Login">
+        <action
+            android:id="@+id/login2Lista"
+            app:destination="@id/gameListFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.sierra.vhr.fragments.DetallesFragment"
+        android:label="Detalle">
+        <argument
+            android:name="gameId"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/detalles2Aniadir"
+            app:destination="@id/addGameFragment"/>
+    </fragment>
+
+    <action
+        android:id="@+id/lista2login"
+        app:destination="@id/loginFragment"
+        app:popUpTo="@id/loginFragment"
+        app:popUpToInclusive="true"/>
+
+    <fragment
+        android:id="@+id/gameListFragment"
+        android:name="com.sierra.vhr.fragments.ListaJuegosFragment"
+        android:label="Mi Colección">
+        <action
+            android:id="@+id/Lista2Aniadir"
+            app:destination="@id/addGameFragment"/>
+        <action
+            android:id="@+id/lista2detalle"
+            app:destination="@id/detailFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/addGameFragment"
+        android:name="com.sierra.vhr.fragments.AddJuegoFragment"
+        android:label="Añadir Juego"/>
+
+</navigation>
