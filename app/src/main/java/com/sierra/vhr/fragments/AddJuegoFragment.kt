@@ -9,8 +9,8 @@ import android.widget.SeekBar
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.sierra.vhr.databinding.FragmentAddGameBinding
 import androidx.lifecycle.lifecycleScope
+import com.sierra.vhr.databinding.FragmentAddJuegoBinding
 import com.sierra.vhr.network.ClienteRetrofit
 import com.sierra.vhr.network.model.PeticionJuego
 import com.sierra.vhr.utils.SessionManager
@@ -21,7 +21,7 @@ import kotlinx.coroutines.launch
 class AddJuegoFragment : Fragment() {
     private var idJuego: Int = -1
     private var modoEdicion = false
-    private var _binding: FragmentAddGameBinding? = null
+    private var _binding: FragmentAddJuegoBinding? = null
     private lateinit var sessionManager: SessionManager
     private val binding get() = _binding!!
 
@@ -50,7 +50,7 @@ class AddJuegoFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentAddGameBinding.inflate(inflater, container, false)
+        _binding = FragmentAddJuegoBinding.inflate(inflater, container, false)
         return binding.root
     }
 

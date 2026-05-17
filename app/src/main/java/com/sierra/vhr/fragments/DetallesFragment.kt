@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.sierra.vhr.R
-import com.sierra.vhr.databinding.FragmentDetailBinding
+import com.sierra.vhr.databinding.FragmentDetalleBinding
 import com.sierra.vhr.network.ClienteRetrofit
 import com.sierra.vhr.network.model.RespuestaJuego
 import com.sierra.vhr.utils.SessionManager
@@ -17,7 +17,7 @@ import kotlinx.coroutines.launch
 
 class DetallesFragment : Fragment() {
 
-    private var _binding: FragmentDetailBinding? = null
+    private var _binding: FragmentDetalleBinding? = null
     private val binding get() = _binding!!
     private lateinit var sessionManager: SessionManager
     private var juegoActual: RespuestaJuego? = null
@@ -28,7 +28,7 @@ class DetallesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentDetailBinding.inflate(inflater, container, false)
+        _binding = FragmentDetalleBinding.inflate(inflater, container, false)
         return binding.root
     }
 

@@ -12,7 +12,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sierra.vhr.R
 import com.sierra.vhr.adapter.AdapterJuegos
-import com.sierra.vhr.databinding.FragmentGameListBinding
+import com.sierra.vhr.databinding.FragmentListaJuegoBinding
 import com.sierra.vhr.network.ClienteRetrofit
 import com.sierra.vhr.network.model.RespuestaJuego
 import com.sierra.vhr.utils.SessionManager
@@ -21,7 +21,7 @@ import kotlinx.coroutines.launch
 
 class ListaJuegosFragment : Fragment() {
 
-    private var _binding: FragmentGameListBinding? = null
+    private var _binding: FragmentListaJuegoBinding? = null
     private val binding get() = _binding!!
     private lateinit var adaptador: AdapterJuegos
     private lateinit var gestorSesion: SessionManager
@@ -38,7 +38,7 @@ class ListaJuegosFragment : Fragment() {
         savedInstanceState: Bundle?,
 
     ): View {
-        _binding = FragmentGameListBinding.inflate(inflater, container, false)
+        _binding = FragmentListaJuegoBinding.inflate(inflater, container, false)
         return binding.root
     }
 
